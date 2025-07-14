@@ -1,0 +1,64 @@
+id: interface_quiz
+learningObjectives:
+  - Match interfaces to their correct use cases.
+hints:
+  - Consider how interfaces enforce consistency across various parts of your
+    code.
+  - Compare scenarios on the [official
+    docs](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#interfaces).
+startFlow:
+  do:
+    - actionId: bot_message
+      params:
+        person: lucca
+        messages:
+          - text: Time for some matching fun! Which scenario is a classic use case for
+              TypeScript interfaces?
+    - actionId: quiz_message
+      name: quiz
+      params:
+        person: lucca
+        options:
+          - Defining a fixed structure that multiple objects will follow.
+          - Serving as a template for a class to implement specific features.
+          - Initiating runtime changes to object properties.
+trigger:
+  type: chat_form_submitted
+  flowNode:
+    switch:
+      key: ${formSubmission}
+      cases:
+        A:
+          do:
+            - actionId: bot_message
+              params:
+                person: lucca
+                messages:
+                  - text: That's spot on! Interfaces are perfect for defining object shapes.
+            - actionId: bot_message
+              params:
+                person: lucca
+                messages:
+                  - text: Awesome work! Click 'Next' to explore more about unions and intersections.
+            - actionId: finish_step
+        B:
+          do:
+            - actionId: bot_message
+              params:
+                person: lucca
+                messages:
+                  - text: That's more like something abstract classes do. Keep trying!
+            - actionId: replay_action
+              params:
+                actionName: quiz
+        C:
+          do:
+            - actionId: bot_message
+              params:
+                person: lucca
+                messages:
+                  - text: Actually, that's not what interfaces are for. Interfaces provide
+                      type-checking, not runtime operations.
+            - actionId: replay_action
+              params:
+                actionName: quiz
