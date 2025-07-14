@@ -1,0 +1,35 @@
+id: unions_and_intersections
+learningObjectives:
+  - Learn about union and intersection types in TypeScript.
+hints:
+  - For a deeper dive, refer to the [union and intersection
+    guide](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#unions-and-intersections).
+startFlow:
+  do:
+    - actionId: bot_message
+      params:
+        person: lucca
+        messages:
+          - text: How about some type-bending fun with unions and intersections?
+          - text: Union types allow a variable to hold more than one type, making your code
+              flexible.
+          - text: It's like saying a variable can be a 'string' or a 'number'.
+          - text: On the other hand, intersection types combine multiple types into one,
+              which can be used to merge object properties.
+          - text: This creates a new type that holds properties from both types. It's the
+              best of both worlds!
+          - text: For more on unions and intersections, visit [this
+              resource](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#unions-and-intersections).
+    - actionId: ready_message
+      params:
+        person: lucca
+trigger:
+  type: user_ready_response
+  flowNode:
+    do:
+      - actionId: bot_message
+        params:
+          person: lucca
+          messages:
+            - text: Take your time to absorb this info, and click 'Next' when ready!
+      - actionId: finish_step
