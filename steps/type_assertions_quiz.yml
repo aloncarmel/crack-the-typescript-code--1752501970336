@@ -2,9 +2,7 @@ id: type_assertions_quiz
 learningObjectives:
   - Identify when to use type assertions in TypeScript.
 hints:
-  - Reviewing the [type assertion
-    section](https://www.typescriptlang.org/docs/handbook/basic-types.html)
-    might provide clarity.
+  - Reviewing the [type assertion section](https://www.typescriptlang.org/docs/handbook/basic-types.html) might provide clarity.
 startFlow:
   do:
     - actionId: bot_message
@@ -33,13 +31,12 @@ trigger:
               params:
                 person: lucca
                 messages:
-                  - text: Correct! Type assertions are there when you know more about a variable
-                      than TypeScript does.
+                  - text: Correct! Type assertions are there when you know more about a variable than TypeScript does.
             - actionId: bot_message
               params:
                 person: lucca
                 messages:
-                  - text: ":tada: You've completed this part! Press 'Next' to move on."
+                  - text: ':tada: You''ve completed this part! Press ''Next'' to move on.'
             - actionId: finish_step
         B:
           do:
@@ -47,8 +44,7 @@ trigger:
               params:
                 person: lucca
                 messages:
-                  - text: Not quite. Type assertions aren't for converting types, just asserting
-                      them.
+                  - text: Not quite. Type assertions aren't for converting types, just asserting them.
             - actionId: replay_action
               params:
                 actionName: quiz
@@ -58,8 +54,7 @@ trigger:
               params:
                 person: lucca
                 messages:
-                  - text: That's not right. Handling null or undefined values is different from type
-                      assertions.
+                  - text: That's not right. Handling null or undefined values is different from type assertions.
             - actionId: replay_action
               params:
                 actionName: quiz
