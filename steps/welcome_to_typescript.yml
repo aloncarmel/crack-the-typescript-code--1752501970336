@@ -1,0 +1,38 @@
+id: welcome_to_typescript
+learningObjectives:
+  - Understand what TypeScript is and why it's used.
+hints:
+  - Need a reminder on TypeScript benefits? Check the [TypeScript
+    Handbook](https://www.typescriptlang.org/docs/handbook/intro.html).
+startFlow:
+  do:
+    - actionId: bot_message
+      params:
+        person: lucca
+        messages:
+          - text: Welcome to our TypeScript adventure! Let's unravel what TypeScript
+              actually is and why it's so popular.
+          - text: TypeScript is a strongly typed programming language that builds on
+              JavaScript, giving you better tooling at any scale.
+          - text: Imagine JavaScript with superpowers to check your code for errors before
+              you even run it! That's TypeScript for you.
+          - text: Why use it? It brings type safety, enhanced code completion, and helps
+              avoid bugs in your code.
+          - text: TypeScript can catch errors early with its powerful type-checking feature,
+              making development faster and more reliable.
+          - text: For a quick intro watch this [short
+              video](https://www.typescriptlang.org/docs/handbook/intro.html).
+    - actionId: ready_message
+      params:
+        person: lucca
+trigger:
+  type: user_ready_response
+  flowNode:
+    do:
+      - actionId: bot_message
+        params:
+          person: lucca
+          messages:
+            - text: ":clap: Great start! Click 'Continue' when you're all set to dive into the
+                next lesson!"
+      - actionId: finish_step
