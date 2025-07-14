@@ -1,0 +1,35 @@
+id: interfaces_explained
+learningObjectives:
+  - Understand what interfaces are and how to use them in TypeScript.
+hints:
+  - Need help? Check the [interfaces
+    guide](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#interfaces).
+startFlow:
+  do:
+    - actionId: bot_message
+      params:
+        person: lucca
+        messages:
+          - text: Get ready to meet interfaces, one of the coolest features in TypeScript!
+          - text: Interfaces allow you to define the shape of an object, which is incredibly
+              useful for type-checking.
+          - text: Think of interfaces as custom types for your objects. You can specify what
+              properties an object should have, and what type those properties
+              should be.
+          - text: This helps ensure consistency and prevents accidental mismatches in your
+              code.
+          - text: For more on defining and using interfaces, check out this [detail
+              guide](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#interfaces).
+    - actionId: ready_message
+      params:
+        person: lucca
+trigger:
+  type: user_ready_response
+  flowNode:
+    do:
+      - actionId: bot_message
+        params:
+          person: lucca
+          messages:
+            - text: Great! Click 'Next' when you're ready to move on to the practice quiz.
+      - actionId: finish_step
