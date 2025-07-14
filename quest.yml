@@ -1,0 +1,33 @@
+id: typescript_fundamentals-j425j
+title: Crack the TypeScript Code!
+subtitle: "Learn TypeScript: Type safety with JavaScript"
+description: >-
+  Embark on a fun-filled quest to unravel the world of TypeScript! Ever wondered
+  how you could bring more type safety to JavaScript without losing its
+  dynamism? Well, our journey through TypeScript fundamentals is exactly what
+  you need. Delve into TypeScript's capabilities, learn how it enhances code
+  quality, and enjoy the perks of static typing while coding in a
+  JavaScript-like syntax.
+
+
+  From understanding basic types and interfaces to mastering advanced features like Union Types and Type Guards, this course is your starting point. You'll also experience hands-on practice in converting JavaScript files to TypeScript and learn how TypeScript helps catch errors early, saving time and headaches later on.
+
+
+  By the end of this quest, you'll be equipped with foundational TypeScript skills to turbocharge your development process, making your code more robust and maintainable. Ready to unlock new coding superpowers? Let's get started!
+level: beginner
+duration: 0.75
+skills:
+  - programming
+  - typescript
+  - type-safety
+  - software development
+steps:
+  - welcome_to_typescript
+  - basic_types_in_ts
+  - type_assertions_quiz
+  - interfaces_explained
+  - interface_quiz
+  - unions_and_intersections
+  - open_question_type_guards
+type: MODULE
+repository: null
