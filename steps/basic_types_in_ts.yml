@@ -1,0 +1,37 @@
+id: basic_types_in_ts
+learningObjectives:
+  - Explain basic types in TypeScript and their uses.
+hints:
+  - Trying to recall the basic types? This
+    [cheatsheet](https://www.typescriptlang.org/docs/handbook/basic-types.html)
+    might help!
+startFlow:
+  do:
+    - actionId: bot_message
+      params:
+        person: lucca
+        messages:
+          - text: "Alright, now let's explore the very essence of TypeScript: its types!"
+          - text: TypeScript offers basic types that allow you to specify what kind of data
+              your variables should hold.
+          - text: These types include 'number', 'string', 'boolean', 'null', 'undefined',
+              and 'symbol'.
+          - text: Using these types helps ensure you handle data correctly and avoid common
+              errors.
+          - text: For instance, assigning a string to a variable that's expected to be a
+              number will immediately raise a flag!
+          - text: You can learn more about handling different types in this [TypeScript
+              Guide](https://www.typescriptlang.org/docs/handbook/basic-types.html).
+    - actionId: ready_message
+      params:
+        person: lucca
+trigger:
+  type: user_ready_response
+  flowNode:
+    do:
+      - actionId: bot_message
+        params:
+          person: lucca
+          messages:
+            - text: Once you're ready to continue, just hit 'Next'.
+      - actionId: finish_step
